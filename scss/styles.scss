@@ -1,0 +1,216 @@
+/* colors */
+$not-quiet-white: #f5f5f5;
+$not-quiet-transparent-white: rgba(245, 245, 245, 0);
+$button-primary: #1c1c1c80;
+$button-secondary: #00000000;
+$primary-color: #0d0415;
+$secondary-color: #301165;
+$accent-color: #ff0000;
+$checkbox-border: #00000080;
+$check: #affe69;
+/* root */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: $primary-color;
+}
+
+.sec1{
+  display: none;
+}
+.sec2{
+  display: none;
+}
+.sec3{
+  display: none;
+}
+.sec4{
+  display: none;
+}
+.section{
+  margin-top: max(15%, 72px); // every section should have at least 72px margin because of the menu box
+  color:$not-quiet-white;
+}
+
+/* only active section is being displayed */
+.active{
+  display: flex;
+  animation: scaleAnim .5s ease-in-out;
+  transform: translateY(0) scale(1); // slide in from right
+  @keyframes scaleAnim {
+  0%{
+    transform: translateX(100%) scaleX(0);
+  }
+  100%{
+    transform: translateX(0%) scaleX(1);
+  }
+  }
+}
+
+/* intro */
+.header_container{
+  display: inline-flex;
+  width: 100%;
+  justify-content: center; // everything centered
+  .intro{
+    text-align: center;
+    font-size: 4rem;
+    span{
+      font-weight: bold;
+      color: $accent-color;
+    }
+    p{
+      margin-top: 1.5rem;
+      font-weight: normal;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+  /* about me */
+.about_container{
+  display: inline-grid;
+  text-align: center;
+  h1{
+    font-size: 3em;
+  }
+  p{
+    font-size: 2em;
+  }
+  .skills{
+    justify-self: center;
+    margin: 3em;
+    background-color: $button-primary;
+    border:0.1rem solid $button-primary;
+    border-radius: 10px;
+    h2{
+      margin-top: 1em;
+      text-align: center;
+    }
+    .checkbox_container{
+      display: grid;
+      grid-template-columns: auto auto;
+      margin: 1em;
+      .checkbox{
+        display: grid;
+        grid-template-columns: max-content max-content; // fr1 max fr2 max
+        align-items: center; // align box and text
+        padding-inline: 1em; // space between
+        .box{
+          height: 2em;
+          width: 2em;
+          margin: 1rem;
+          border: 0.2em solid $not-quiet-white;
+          border-radius: 10%;
+          i{
+            color: $check;
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+/* portfolio */
+.portfolio_container{
+  display: grid;
+}
+/* background */
+.background{
+  position: absolute;
+  top: 0;
+  left:0;
+  .circle{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    left: -25%;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    z-index: -10;
+  }
+  .glass{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    z-index: -1;
+    animation: pulse 4s alternate infinite running;
+    @keyframes pulse {
+      0% {
+        backdrop-filter: blur(.5px);
+      }
+      100% {
+        backdrop-filter: blur(6px);
+      }
+    }
+  }
+  .square{
+    position: fixed;
+    width: 15rem;
+    height: 15rem;
+    top: 10%;
+    right: 10%;
+    z-index: -5;
+    background-color: $secondary-color;
+    border-radius: 10%;
+    animation: spin 32s ease-in-out infinite running;
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      25%{
+        transform: rotate(180deg);
+
+      }
+      50%{
+        transform: rotate(0deg);
+      }
+      75%{
+        transform: rotate(-180deg);
+      }
+      100%{
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+/* menu */
+.menu {
+  display: inline-flex;
+  position: fixed;
+  top: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  .button{
+    position: relative;
+    display: inline-flex;
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $button-primary;
+    color: $not-quiet-white;
+    cursor: pointer;
+    &:hover{
+      transition: .2s ease-in-out;
+      font-size: 1.8rem;
+    }
+  }
+  .active-button{
+    background-color: $button-secondary;
+    cursor: default;
+    &:hover{
+      font-size: 1.4rem;
+    }
+  }
+}

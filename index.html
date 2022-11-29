@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome Page</title>
+
+    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="background">
+
+        <svg class="square"></svg>
+        <svg class="circle"></svg>
+        <svg class="glass"></svg>
+
+    </div>
+
+    <header>
+    <section class="section sec1 active" id="home"> <!-- WHEN DONE MARK THIS AS ACTIVE SECTION -->
+        <div class="header_container">
+            <div class="intro">
+                    Hi, mein Name ist <span>Paul Dürrwang.</span><br/>
+                    Schön, dass du meinen Portfolio besuchst.
+                <p>
+
+                    Hier gibt es kleine Einblicke in meine aktuellen Arbeiten.<br>
+                    Meinen CV kannst du durch Klicken der entsprechenden Menüpunkte meinem Portfolio entnehmen.<br>
+                    Wenn dir mein kleines Projekt gefällt würde ich mich über Feedback freuen!<br>
+
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<main>
+
+    <section class="section sec2" id="about" style="justify-content: center">
+        <div class="about_container">
+            <h1 class="quick_facts">
+                About me
+            </h1>
+            <p class="about_me">
+                Student at Hochschule Rhein Main Wiesbaden!<br/>
+                I cry a lot when writing HTML/CSS!<br/>
+                Becoming Software developer based in Germany, Frankfurt am Main!<i class ="emoji">📌</i>
+            </p>
+            <div class="skills">
+                <h2>Erfahrungen mit:</h2>
+                <div class="checkbox_container">
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">Java</p>
+                    </div>
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">C</p>
+                    </div>
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">VCS</p>
+                    </div>
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">RDBMS</p>
+                    </div>
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">UML</p>
+                    </div>
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">HTML</p>
+                    </div>
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">CSS</p>
+                    </div>
+                    <div class="checkbox">
+                        <div class="box"><i class="fa-solid fa-check"></i></div>
+                        <p class="text">Java Script</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section sec3" id="portfolio">
+        <div class="portfolio_container">
+            <i class="fa-brands fa-github"></i><a href="https://github.com">GitHub</a>
+            <i class="fa-brands fa-instagram"></i><a href="https://instagram.com">Instagram</a>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-gitlab"></i>
+            <i class="fa-solid fa-at"></i>
+        </div>
+    </section>
+
+    <section class="section sec4" id="imprint">
+        <i class="fa-sharp fa-solid fa-heart"></i>
+    </section>
+
+</main>
+
+<div class="menu">
+
+    <div class="button button_1 active-button" data-id="home">
+        <i class="fa-solid fa-house" data-id="home"></i>
+    </div>
+    <div class="button button_2" data-id="about">
+        <i class="fa-solid fa-lightbulb" data-id="about"></i>
+    </div>
+    <div class="button button_3" data-id="portfolio">
+        <i class="fa-solid fa-code" data-id="portfolio"></i>
+    </div>
+    <div class="button button_4" data-id="imprint">
+        <i class="fa-solid fa-envelope" data-id="imprint"></i>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

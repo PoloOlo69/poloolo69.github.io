@@ -72,16 +72,24 @@ body{
 
   /* about me */
 .about_container{
-  display: inline-grid;
+  display:inline-flex;
+  width: 100%;
+  flex-direction: column;
   text-align: left;
   h1{
-    font-size: 3em;
+    text-align: center;
+    font-size: 3rem;
   }
   p{
-    font-size: 2em;
+    text-align: center;
+    font-size: 1.5rem;
   }
   .skills{
+    justify-content: center;
+    align-content: center;
+    align-self: center;
     justify-self: center;
+    width: fit-content;
     margin: 3em;
     background-color: $button-primary;
     border:0.1rem solid $button-primary;
@@ -93,21 +101,24 @@ body{
     .checkbox_container{
       display: grid;
       grid-template-columns: auto auto;
-      margin: 1em;
+      margin: 1rem;
       .checkbox{
-        display: grid;
+        display: inline-flex;
         grid-template-columns: max-content max-content; // fr1 max fr2 max
         align-items: center; // align box and text
+        align-content: center;
+        justify-items: center;
+        justify-content: left;
         padding-inline: 1em; // space between
         .box{
-          height: 2em;
-          width: 2em;
+          height: 2rem;
+          width: 2rem;
           margin: 1rem;
-          border: 0.2em solid $not-quiet-white;
           border-radius: 10%;
           i{
+            justify-self: center;
             color: $check;
-            font-size: 1.5em;
+            font-size: 1.5rem;
           }
         }
       }
@@ -117,6 +128,16 @@ body{
 /* portfolio */
 .portfolio_container{
   display: grid;
+  justify-content: center;
+  width: fit-content;
+  margin: 3em;
+  background-color: $button-primary;
+  border:0.1rem solid $button-primary;
+  border-radius: 10px;
+  .button-box{
+    width: 26rem;
+    height: 13rem;
+  }
 }
 /* background */
 .background{

@@ -8,7 +8,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #0d0415;
+  background-color: #c062ef;
 }
 
 .sec1 {
@@ -54,23 +54,23 @@ body {
   justify-content: center;
 }
 .header_container .intro {
-  text-align: center;
-  font-size: 4rem;
+  width: 50%;
+  text-align: left;
 }
-.header_container .intro span {
-  font-weight: bold;
-  color: #ff0000;
-}
-.header_container .intro p {
-  margin-top: 1.5rem;
-  font-weight: normal;
+.header_container .intro .tiny {
+  font-weight: lighter;
   font-size: 1.5rem;
+}
+.header_container .intro .tiny span {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: #ff0000;
 }
 
 /* about me */
 .about_container {
   display: inline-grid;
-  text-align: center;
+  text-align: left;
 }
 .about_container h1 {
   font-size: 3em;
@@ -129,7 +129,7 @@ body {
   height: 100%;
   left: -25%;
   border-radius: 50%;
-  background-color: #301165;
+  background-color: #5689ce;
   z-index: -10;
 }
 .background .glass {
@@ -155,7 +155,7 @@ body {
   top: 10%;
   right: 10%;
   z-index: -5;
-  background-color: #301165;
+  background-color: #5689ce;
   border-radius: 10%;
   animation: spin 32s ease-in-out infinite running;
 }

@@ -1,12 +1,10 @@
 /* colors */
 $not-quiet-white: #f5f5f5;
-$not-quiet-transparent-white: rgba(245, 245, 245, 0);
 $button-primary: #1c1c1c80;
 $button-secondary: #00000000;
-$primary-color: #0d0415;
-$secondary-color: #301165;
+$primary-color: #c062ef;
+$secondary-color: #5689ce;
 $accent-color: #ff0000;
-$checkbox-border: #00000080;
 $check: #affe69;
 /* root */
 *{
@@ -58,16 +56,16 @@ body{
   width: 100%;
   justify-content: center; // everything centered
   .intro{
-    text-align: center;
-    font-size: 4rem;
-    span{
-      font-weight: bold;
-      color: $accent-color;
-    }
-    p{
-      margin-top: 1.5rem;
-      font-weight: normal;
+    width: 50%;
+    text-align: left;
+    .tiny{
+      font-weight: lighter;
       font-size: 1.5rem;
+      span{
+        font-size: 4rem;
+        font-weight: bolder;
+        color: $accent-color;
+      }
     }
   }
 }
@@ -75,7 +73,7 @@ body{
   /* about me */
 .about_container{
   display: inline-grid;
-  text-align: center;
+  text-align: left;
   h1{
     font-size: 3em;
   }

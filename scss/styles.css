@@ -78,6 +78,9 @@ body {
   text-align: center;
   font-size: 3rem;
 }
+.about_container h1 span {
+  color: red;
+}
 .about_container p {
   text-align: center;
   font-size: 1.5rem;
@@ -128,14 +131,15 @@ body {
   display: grid;
   justify-content: center;
   width: fit-content;
-  margin: 3em;
+  margin: 0;
+  height: 80vh;
   background-color: rgba(28, 28, 28, 0.5019607843);
   border: 0.1rem solid rgba(28, 28, 28, 0.5019607843);
   border-radius: 10px;
 }
 .portfolio_container .button-box {
-  width: 26rem;
-  height: 13rem;
+  width: 20rem;
+  height: 10rem;
 }
 
 /* background */

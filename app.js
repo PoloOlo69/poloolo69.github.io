@@ -19,4 +19,13 @@ function Transition(){
 
     })
 }
+function copyToClipboard(){
+    const mail = document.getElementById("email");
+
+    mail.select();
+    mail.setSelectionRange(0, 99999); // for mobile
+    navigator.clipboard.writeText(mail.value());
+
+    alert("Copied to Clipboard: "+ mail.value());
+}
 Transition();

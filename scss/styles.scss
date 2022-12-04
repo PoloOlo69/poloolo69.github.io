@@ -1,6 +1,7 @@
 /* colors */
 $not-quiet-white: #f5f5f5;
 $button-primary: #1c1c1c80;
+$box-shadow: #000000a0;
 $button-secondary: #00000000;
 $primary-color: #c062ef;
 $secondary-color: #5689ce;
@@ -31,7 +32,6 @@ body{
   display: none;
 }
 .section{
-  margin-top: max(15%, 72px); // every section should have at least 72px margin because of the menu box
   color:$not-quiet-white;
 }
 
@@ -52,6 +52,7 @@ body{
 
 /* intro */
 .header_container{
+  margin: max(72px, 15%) auto; // every section should have at least 72px margin because of the menu box
   display: inline-flex;
   width: 100%;
   justify-content: center; // everything centered
@@ -74,6 +75,7 @@ body{
 .about_container{
   display:inline-flex;
   width: 100%;
+  margin-top: max(10%,72px);
   flex-direction: column;
   text-align: left;
   h1{
@@ -130,17 +132,33 @@ body{
 }
 /* portfolio */
 .portfolio_container{
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: fit-content;
-  margin: 0;
-  height: 80vh;
-  background-color: $button-primary;
-  border:0.1rem solid $button-primary;
-  border-radius: 10px;
+  align-items: center;
+  margin: max(6%, 72px) auto;
+  hr{
+    border-top: 1px solid $button-primary;
+    width: 95%;
+    border-radius: 50%;
+  }
   .button-box{
+    animation: all 1s ease-in-out;
+    &:hover{
+      scale: 105%;
+      box-shadow: 2px 2px $box-shadow;
+    }
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 10px;
+    border:0.1rem solid $button-primary;
+    background-color: $button-primary;
     width: 20rem;
     height: 10rem;
+    align-items: center;
+    justify-content: center;
+    i{font-size: 2rem;}
   }
 }
 /* background */
@@ -225,7 +243,7 @@ body{
     color: $not-quiet-white;
     cursor: pointer;
     &:hover{
-      transition: .2s ease-in-out;
+      transition: .2s ease-out;
       font-size: 1.8rem;
     }
   }

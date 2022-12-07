@@ -1,6 +1,5 @@
 // every .button class
 const buttons = document.querySelectorAll('.button');
-const sections = document.querySelectorAll('.section');
 const body = document.querySelector('body')
 
 function Transition(){
@@ -21,11 +20,16 @@ function Transition(){
 }
 function copyToClipboard(){
     const mail = document.getElementById("email");
-
-    mail.select();
-    mail.setSelectionRange(0, 99999); // for mobile
-    navigator.clipboard.writeText(mail.value());
-
-    alert("Copied to Clipboard: "+ mail.value());
+    let mailText = mail.innerText;
+    mailText = mailText.replace(/\s/g, '');
+    const input = document.createElement('input');
+    input.setAttribute('value', mailText);
+    document.body.appendChild(input);
+    input.select();
+    const result = document.aValue = "Copy";
+    document.body.removeChild(input);
+    if(result){
+        alert("Email copied to clipboard");
+    }
 }
 Transition();

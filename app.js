@@ -1,14 +1,14 @@
 // every .button class
 const buttons = document.querySelectorAll('.button');
-const body = document.querySelector('body')
-
-function Transition(){
-    buttons.forEach(button=>{
-        button.addEventListener('click', e => {
+const body = document.querySelector('body');
+const copyButton = document.querySelector('#copy-button');
+buttons.forEach(button=>{
+        button.addEventListener('click', () => {
             document.querySelector('.active-button').classList.remove('active-button');
             button.className+= ' active-button';
         })
     })
+
     body.addEventListener('click', (e) => {
         const id = e.target.dataset.id;
         if(id){
@@ -17,19 +17,19 @@ function Transition(){
         }
 
     })
-}
-function copyToClipboard(){
-    const mail = document.getElementById("email");
-    let mailText = mail.innerText;
-    mailText = mailText.replace(/\s/g, '');
-    const input = document.createElement('input');
-    input.setAttribute('value', mailText);
-    document.body.appendChild(input);
-    input.select();
-    const result = document.aValue = "Copy";
-    document.body.removeChild(input);
-    if(result){
-        alert("Email copied to clipboard");
-    }
-}
+
+copyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText('paul.duerrwang@icloud.com')
+        .then(() => {
+            console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    copyButton.style.textTransform = 'all .5s ease';
+    copyButton.innerHTML = 'Copied to Clipboard!';
+
+});
+
+
 Transition();

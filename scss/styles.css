@@ -97,6 +97,11 @@ body {
   border: 0.1rem solid rgba(28, 28, 28, 0.5019607843);
   border-radius: 10px;
 }
+.about_container .skills:hover {
+  transition: all 0.4s ease-in-out;
+  scale: 105%;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.6274509804);
+}
 .about_container .skills h2 {
   margin-top: 1em;
   text-align: center;
@@ -141,7 +146,7 @@ body {
   border-radius: 50%;
 }
 .portfolio_container .button-box {
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -156,6 +161,9 @@ body {
 .portfolio_container .button-box:hover {
   scale: 105%;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.6274509804);
+}
+.portfolio_container .button-box #email {
+  transition: all 4s ease;
 }
 .portfolio_container .button-box i {
   font-size: 2rem;

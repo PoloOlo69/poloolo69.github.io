@@ -92,6 +92,11 @@ body{
   .skills{
     justify-content: center;
     align-content: center;
+    &:hover{
+      transition: all .4s ease-in-out;
+      scale: 105%;
+      box-shadow: 2px 2px $box-shadow;
+    }
     align-self: center;
     justify-self: center;
     width: fit-content;
@@ -143,11 +148,12 @@ body{
     border-radius: 50%;
   }
   .button-box{
-    transition: all .5s ease;
+    transition: all .4s ease;
     &:hover{
       scale: 105%;
       box-shadow: 2px 2px $box-shadow;
     }
+    #email{ transition: all 4s ease; }
     display: flex;
     flex-direction: column;
     margin: 10px;

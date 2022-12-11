@@ -19,7 +19,7 @@ buttons.forEach(button=>{
 
     })
 
-copyButton.addEventListener('click', () => {
+copyButton.addEventListener('click', (e) => {
     navigator.clipboard.writeText('paul.duerrwang@icloud.com')
         .then(() => {
             console.log('Text copied to clipboard');
@@ -27,10 +27,6 @@ copyButton.addEventListener('click', () => {
         .catch(err => {
             console.error('Failed to copy text: ', err);
         });
-    copyButton.style.textTransform = 'all .5s ease';
-    copyButton.innerHTML = 'Copied to Clipboard!';
-
+    copyButton.textContent = 'Copied to Clipboard!';
+    removeEventListener('click', e);
 });
-
-
-Transition();

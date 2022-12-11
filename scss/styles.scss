@@ -92,11 +92,6 @@ body{
   .skills{
     justify-content: center;
     align-content: center;
-    &:hover{
-      transition: all .4s ease-in-out;
-      scale: 105%;
-      box-shadow: 2px 2px $box-shadow;
-    }
     align-self: center;
     justify-self: center;
     width: fit-content;
@@ -104,6 +99,12 @@ body{
     background-color: $button-primary;
     border:0.1rem solid $button-primary;
     border-radius: 10px;
+    &:hover{
+      transition: all .4s ease-in-out;
+      
+      scale: 105%;
+      box-shadow: 2px 2px $box-shadow;
+    }
     h2{
       margin-top: 1em;
       text-align: center;

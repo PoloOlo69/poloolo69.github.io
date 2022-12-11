@@ -2,6 +2,7 @@
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 const copyButton = document.querySelector('#copy-button');
+
 buttons.forEach(button=>{
         button.addEventListener('click', () => {
             document.querySelector('.active-button').classList.remove('active-button');

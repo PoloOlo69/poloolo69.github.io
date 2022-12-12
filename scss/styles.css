@@ -56,12 +56,10 @@ body {
 .header_container .intro {
   width: 50%;
   text-align: left;
-}
-.header_container .intro .tiny {
   font-weight: lighter;
   font-size: 2rem;
 }
-.header_container .intro .tiny span {
+.header_container .intro span {
   font-size: 3rem;
   font-weight: bolder;
   color: #ff0000;

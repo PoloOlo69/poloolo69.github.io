@@ -59,7 +59,6 @@ body{
   .intro{
     width: 50%;
     text-align: left;
-    .tiny{
       font-weight: lighter;
       font-size: 2rem;
       span{
@@ -67,7 +66,7 @@ body{
         font-weight: bolder;
         color: $accent-color;
       }
-    }
+
   }
 }
 

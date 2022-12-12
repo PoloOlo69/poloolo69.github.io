@@ -61,9 +61,9 @@ body{
     text-align: left;
     .tiny{
       font-weight: lighter;
-      font-size: 1.5rem;
+      font-size: 2rem;
       span{
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: bolder;
         color: $accent-color;
       }
@@ -74,7 +74,7 @@ body{
   /* about me */
 .about_container{
   display:inline-flex;
-  width: 100%;
+  width: 50%;
   margin-top: max(10%,72px);
   flex-direction: column;
   text-align: left;
@@ -87,7 +87,7 @@ body{
   }
   p{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .skills{
     justify-content: center;
@@ -143,7 +143,7 @@ body{
   justify-self: center;
   align-self: center;
   align-items: center;
-  margin: max(6%, 72px) auto;
+  margin: max(150px,10%) auto;
   hr{
     border-top: 1px solid $button-primary;
     width: 95%;
@@ -175,6 +175,14 @@ body{
     i{font-size: 2rem;}
   }
 }
+
+/*   imprint   */
+.imprint-container{
+  .i{
+    font-size: 5rem;
+  }
+}
+
 /* background */
 .background{
   position: absolute;

@@ -59,10 +59,10 @@ body {
 }
 .header_container .intro .tiny {
   font-weight: lighter;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .header_container .intro .tiny span {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   color: #ff0000;
 }
@@ -70,7 +70,7 @@ body {
 /* about me */
 .about_container {
   display: inline-flex;
-  width: 100%;
+  width: 50%;
   margin-top: max(10%, 72px);
   flex-direction: column;
   text-align: left;
@@ -84,7 +84,7 @@ body {
 }
 .about_container p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .about_container .skills {
   justify-content: center;
@@ -140,7 +140,7 @@ body {
   justify-self: center;
   align-self: center;
   align-items: center;
-  margin: max(6%, 72px) auto;
+  margin: max(150px, 10%) auto;
 }
 .portfolio_container hr {
   border-top: 1px solid rgba(28, 28, 28, 0.5019607843);
@@ -176,6 +176,11 @@ body {
 }
 .portfolio_container .button-box i {
   font-size: 2rem;
+}
+
+/*   imprint   */
+.imprint-container .i {
+  font-size: 5rem;
 }
 
 /* background */

@@ -140,6 +140,8 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-self: center;
+  align-self: center;
   align-items: center;
   margin: max(6%, 72px) auto;
   hr{
@@ -156,13 +158,16 @@ body{
       scale: 105%;
       box-shadow: 2px 2px $box-shadow;
     }
+    .span{
+      padding: 20px;
+        font-size: 1.5rem;
+        font-weight: bolder;}
     #email{ transition: all 4s ease; }
     display: flex;
     flex-direction: column;
     margin: 10px;
     border-radius: 10px;
     border:0.1rem solid $button-primary;
-    background-color: $button-primary;
     width: 20rem;
     height: 10rem;
     align-items: center;

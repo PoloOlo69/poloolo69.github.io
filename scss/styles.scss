@@ -97,14 +97,13 @@ body{
     width: fit-content;
     margin: 3em;
     background-color: $button-primary;
-    border:0.1rem solid $button-primary;
-    border-radius: 10px;
     &:hover{
       transition: all .4s ease-in-out;
-      
       scale: 105%;
       box-shadow: 2px 2px $box-shadow;
     }
+    border:0.1rem solid $button-primary;
+    border-radius: 10px;
     h2{
       margin-top: 1em;
       text-align: center;
@@ -150,6 +149,9 @@ body{
   }
   .button-box{
     transition: all .4s ease;
+    color: $not-quiet-white;
+    text-decoration: $not-quiet-white;
+    background-color: $button-primary;
     &:hover{
       scale: 105%;
       box-shadow: 2px 2px $box-shadow;

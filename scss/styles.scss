@@ -13,7 +13,10 @@ $check: #affe69;
   margin: 0;
   padding: 0;
 }
+:root{
+--wiggle: 10deg;
 
+}
 body{
   font-family: 'Roboto', sans-serif;
   background-color: $primary-color;
@@ -176,10 +179,35 @@ body{
 }
 
 /*   imprint   */
-.imprint-container{
-  .i{
+.heart-container{
+  font-size: 5rem;
+  justify-content: center;
+    align-items: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  animation: wiggle 1s ease-in-out infinite;
+  touch-action: none;
+  #heart-a {
+    position:absolute;
+    color: red;
+    z-index: 11;
     font-size: 5rem;
   }
+  #heart-b{
+    left: 3px;
+    top: 3px;
+
+    position: relative;
+    color: darkred;
+    z-index: 10;
+    font-size: 5rem;
+  }
+}
+@keyframes wiggle {
+  0% { rotate:0deg; }
+  50% {rotate: var(--wiggle); }
+  100% { rotate:0deg; }
 }
 
 /* background */

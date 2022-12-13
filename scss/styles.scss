@@ -242,6 +242,7 @@ body{
 /* menu */
 .menu {
   display: inline-flex;
+  cursor: pointer;
   position: fixed;
   top: 10px;
   right: 50%;
@@ -258,7 +259,6 @@ body{
     justify-content: center;
     background-color: $button-primary;
     color: $not-quiet-white;
-    cursor: pointer;
     &:hover{
       transition: .2s ease-out;
       font-size: 1.8rem;

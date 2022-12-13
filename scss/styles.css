@@ -54,10 +54,15 @@ body {
   justify-content: center;
 }
 .header_container .intro {
-  width: 50%;
+  width: 70%;
   text-align: left;
   font-weight: lighter;
   font-size: 2rem;
+}
+@media screen and (max-width: 720px) {
+  .header_container .intro {
+    width: 90%;
+  }
 }
 .header_container .intro span {
   font-size: 3rem;
@@ -68,10 +73,15 @@ body {
 /* about me */
 .about_container {
   display: inline-flex;
-  width: 50%;
+  width: 70%;
   margin-top: max(10%, 72px);
   flex-direction: column;
   text-align: left;
+}
+@media screen and (max-width: 720px) {
+  .about_container {
+    width: 90%;
+  }
 }
 .about_container h1 {
   text-align: center;
@@ -138,7 +148,7 @@ body {
   justify-self: center;
   align-self: center;
   align-items: center;
-  margin: max(150px, 10%) auto;
+  margin: 130px auto;
 }
 .portfolio_container hr {
   border-top: 1px solid rgba(28, 28, 28, 0.5019607843);

@@ -57,8 +57,11 @@ body{
   width: 100%;
   justify-content: center; // everything centered
   .intro{
-    width: 50%;
-    text-align: left;
+    width: 70%;
+    @media screen and (max-width: 720px) {
+      width: 90%;
+    }
+      text-align: left;
       font-weight: lighter;
       font-size: 2rem;
       span{
@@ -73,7 +76,10 @@ body{
   /* about me */
 .about_container{
   display:inline-flex;
-  width: 50%;
+  width: 70%;
+  @media screen and (max-width: 720px) {
+    width: 90%;
+  }
   margin-top: max(10%,72px);
   flex-direction: column;
   text-align: left;
@@ -142,7 +148,7 @@ body{
   justify-self: center;
   align-self: center;
   align-items: center;
-  margin: max(150px,10%) auto;
+  margin: 130px auto;
   hr{
     border-top: 1px solid $button-primary;
     width: 95%;
@@ -153,15 +159,6 @@ body{
     color: $not-quiet-white;
     text-decoration: $not-quiet-white;
     background-color: $button-primary;
-    &:hover{
-      scale: 105%;
-      box-shadow: 2px 2px $box-shadow;
-    }
-    .span{
-      padding: 20px;
-        font-size: 1.5rem;
-        font-weight: bolder;}
-    #email{ transition: all 4s ease; }
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -171,6 +168,9 @@ body{
     height: 10rem;
     align-items: center;
     justify-content: center;
+    &:hover{ scale: 105%; box-shadow: 2px 2px $box-shadow;}
+    .span{padding: 20px;font-size: 1.5rem;font-weight: bolder;}
+    #email{ transition: all 4s ease; }
     i{font-size: 2rem;}
   }
 }
@@ -204,12 +204,8 @@ body{
     z-index: -1;
     animation: pulse 4s alternate infinite running;
     @keyframes pulse {
-      0% {
-        backdrop-filter: blur(.5px);
-      }
-      100% {
-        backdrop-filter: blur(6px);
-      }
+      0%    { backdrop-filter: blur(0.5px);}
+      100%  { backdrop-filter: blur(006px);}
     }
   }
   .square{

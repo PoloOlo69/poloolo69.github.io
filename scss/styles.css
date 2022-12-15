@@ -7,7 +7,16 @@
 }
 
 :root {
-  --wiggle: 10deg;
+  --frac: 1;
+  --rotat: 10deg;
+  --srotat: -10deg;
+  --hi: 6px;
+  --mid: 4px;
+  --lo: 2px;
+  --no: 0px;
+  --shi: -6px;
+  --smid: -4px;
+  --slo: -2px;
 }
 
 body {
@@ -52,9 +61,8 @@ body {
 
 /* intro */
 .header_container {
-  margin: max(72px, 15%) auto;
-  display: inline-flex;
-  width: 100%;
+  margin: max(72px, 20%) auto;
+  display: flex;
   justify-content: center;
 }
 .header_container .intro {
@@ -95,14 +103,11 @@ body {
   color: red;
 }
 .about_container p {
-  text-align: center;
   font-size: 2rem;
 }
 .about_container .skills {
   justify-content: center;
-  align-content: center;
   align-self: center;
-  justify-self: center;
   width: fit-content;
   margin: 3em;
   background-color: rgba(28, 28, 28, 0.5019607843);
@@ -127,9 +132,7 @@ body {
   display: inline-flex;
   grid-template-columns: max-content max-content;
   align-items: center;
-  align-content: center;
   justify-items: center;
-  justify-content: left;
   padding-inline: 1em;
 }
 .about_container .skills .checkbox_container .checkbox .box {
@@ -198,33 +201,57 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  animation: wiggle 1s ease-in-out infinite;
+  animation: wiggle 0.7s infinite;
   touch-action: none;
 }
 .heart-container #heart-a {
   position: absolute;
   color: red;
   z-index: 11;
-  font-size: 5rem;
+  font-size: 10rem;
 }
 .heart-container #heart-b {
-  left: 3px;
-  top: 3px;
+  left: 5px;
+  top: 5px;
   position: relative;
   color: darkred;
   z-index: 10;
-  font-size: 5rem;
+  font-size: 10rem;
 }
 
 @keyframes wiggle {
   0% {
-    rotate: 0deg;
+    transform: translate(var(--lo), var(--lo)) rotate(0deg);
+  }
+  10% {
+    transform: translate(var(--slo), var(--smid)) rotate(var(--srotat));
+  }
+  20% {
+    transform: translate(var(--shi), var(--no)) rotate(var(--rotat));
+  }
+  30% {
+    transform: translate(var(--hi), var(--mid)) rotate(0deg);
+  }
+  40% {
+    transform: translate(var(--lo), var(--slo)) rotate(var(--srotat));
   }
   50% {
-    rotate: var(--wiggle);
+    transform: translate(var(--slo), var(--smid)) rotate(var(--rotat));
+  }
+  60% {
+    transform: translate(var(--shi), var(--lo)) rotate(0deg);
+  }
+  70% {
+    transform: translate(var(--hi), var(--lo)) rotate(var(--srotat));
+  }
+  80% {
+    transform: translate(var(--slo), var(--slo)) rotate(var(--rotat));
+  }
+  90% {
+    transform: translate(var(--lo), var(--mid)) rotate(0deg);
   }
   100% {
-    rotate: 0deg;
+    transform: translate(var(--lo), var(--smid)) rotate(var(--srotat));
   }
 }
 /* background */

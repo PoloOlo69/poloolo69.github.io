@@ -14,8 +14,16 @@ $check: #affe69;
   padding: 0;
 }
 :root{
---wiggle: 10deg;
-
+  --frac: 1;
+  --rotat: 10deg;
+  --srotat: -10deg;
+  --hi: 6px;
+  --mid: 4px;
+  --lo: 2px;
+  --no: 0px;
+  --shi: -6px;
+  --smid: -4px;
+  --slo: -2px;
 }
 body{
   font-family: 'Roboto', sans-serif;
@@ -55,9 +63,8 @@ body{
 
 /* intro */
 .header_container{
-  margin: max(72px, 15%) auto; // every section should have at least 72px margin because of the menu box
-  display: inline-flex;
-  width: 100%;
+  margin: max(72px, 20%) auto; // every section should have at least 72px margin because of the menu box
+  display: flex;
   justify-content: center; // everything centered
   .intro{
     width: 70%;
@@ -89,29 +96,21 @@ body{
   h1{
     text-align: center;
     font-size: 3rem;
-    span{
-      color: red;
-    }
-  }
-  p{
-    text-align: center;
-    font-size: 2rem;
-  }
+    span{ color: red;} }
+  p{ font-size: 2rem;}
   .skills{
     justify-content: center;
-    align-content: center;
     align-self: center;
-    justify-self: center;
     width: fit-content;
     margin: 3em;
     background-color: $button-primary;
+    border:0.1rem solid $button-primary;
+    border-radius: 10px;
     &:hover{
       transition: all .4s ease-in-out;
       scale: 105%;
       box-shadow: 2px 2px $box-shadow;
     }
-    border:0.1rem solid $button-primary;
-    border-radius: 10px;
     h2{
       margin-top: 1em;
       text-align: center;
@@ -124,9 +123,7 @@ body{
         display: inline-flex;
         grid-template-columns: max-content max-content; // fr1 max fr2 max
         align-items: center; // align box and text
-        align-content: center;
         justify-items: center;
-        justify-content: left;
         padding-inline: 1em; // space between
         .box{
           height: 2rem;
@@ -182,32 +179,40 @@ body{
 .heart-container{
   font-size: 5rem;
   justify-content: center;
-    align-items: center;
+  align-items: center;
   display: flex;
   width: 100vw;
   height: 100vh;
-  animation: wiggle 1s ease-in-out infinite;
+  // transition: all ease-in-out 1s;
+  animation: wiggle .7s infinite;
   touch-action: none;
   #heart-a {
     position:absolute;
     color: red;
     z-index: 11;
-    font-size: 5rem;
+    font-size: 10rem;
   }
   #heart-b{
-    left: 3px;
-    top: 3px;
-
+    left: 5px;
+    top: 5px;
     position: relative;
     color: darkred;
     z-index: 10;
-    font-size: 5rem;
+    font-size: 10rem;
   }
 }
 @keyframes wiggle {
-  0% { rotate:0deg; }
-  50% {rotate: var(--wiggle); }
-  100% { rotate:0deg; }
+  0%   {  transform:  translate( var(--lo) , var(--lo   )) rotate(0deg); }
+  10%  {  transform:  translate( var(--slo), var(--smid )) rotate(var(--srotat)); }
+  20%  {  transform:  translate( var(--shi), var(--no   )) rotate(var(--rotat)); }
+  30%  {  transform:  translate( var(--hi) , var(--mid  )) rotate(0deg); }
+  40%  {  transform:  translate( var(--lo) , var(--slo  )) rotate(var(--srotat)); }
+  50%  {  transform:  translate( var(--slo), var(--smid )) rotate(var(--rotat)); }
+  60%  {  transform:  translate( var(--shi), var(--lo   )) rotate(0deg); }
+  70%  {  transform:  translate( var(--hi) , var(--lo   )) rotate(var(--srotat)); }
+  80%  {  transform:  translate( var(--slo), var(--slo  )) rotate(var(--rotat)); }
+  90%  {  transform:  translate( var(--lo) , var(--mid  )) rotate(0deg); }
+  100% {  transform:  translate( var(--lo) , var(--smid )) rotate(var(--srotat)); }
 }
 
 /* background */
@@ -233,7 +238,7 @@ body{
     animation: pulse 4s alternate infinite running;
     @keyframes pulse {
       0%    { backdrop-filter: blur(0.5px);}
-      100%  { backdrop-filter: blur(006px);}
+      100%  { backdrop-filter: blur(6px);}
     }
   }
   .square{
